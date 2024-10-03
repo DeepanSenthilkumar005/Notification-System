@@ -29,6 +29,6 @@ const NotificationApp = () => {
   };
 
   return { sendNotification };
-};
+}
 
 export default NotificationApp;
