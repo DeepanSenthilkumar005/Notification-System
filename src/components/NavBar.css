@@ -1,0 +1,79 @@
+.navbar{
+    background-color: aliceblue !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.dd{
+    background-color: aliceblue;
+    justify-content: right !important;
+}
+.navbar-nav{
+    align-content: end;
+    background-color: aliceblue;
+   
+}
+.button {
+    width: 50px !important;
+    height: 50px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: rgb(44, 44, 44) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: none !important;
+  }
+  
+  .bell {
+    width: 18px !important;
+  }
+  
+  .bell path {
+    fill: white !important;
+  }
+  
+  .button:hover {
+    background-color: rgb(56, 56, 56) !important;
+  }
+  
+  .button:hover .bell {
+    animation: bellRing 0.9s both !important;
+  }
+  
+  /* bell ringing animation keyframes*/
+  @keyframes bellRing {
+    0%,
+    100% {
+      transform-origin: top;
+    }
+  
+    15% {
+      transform: rotateZ(10deg);
+    }
+  
+    30% {
+      transform: rotateZ(-10deg);
+    }
+  
+    45% {
+      transform: rotateZ(5deg);
+    }
+  
+    60% {
+      transform: rotateZ(-5deg);
+    }
+  
+    75% {
+      transform: rotateZ(2deg);
+    }
+  }
+  
+  .button:active {
+    transform: scale(0.8) !important;
+  }
+  
+  .bell{
+    
+  }
