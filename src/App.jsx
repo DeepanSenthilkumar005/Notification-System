@@ -6,11 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [notifications, setNotifications] = useState([]);
 
-
   const addNotification = (message) => {
     setNotifications((prevNotifications) => [
       ...prevNotifications,
-      { message, id:notifications.length },
+      { message, id: notifications.length },
     ]);
   };
 
