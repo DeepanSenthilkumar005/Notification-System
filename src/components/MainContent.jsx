@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container,Card, CardBody, CardTitle, CardText } from "react-bootstrap";
 import './MainContent.css';
+import icon from '../assets/messageIcon.png';
 
 const MainContent = ({ addNotification }) => {
   const [permissionGranted, setPermissionGranted] = useState(false);
@@ -9,6 +10,7 @@ const MainContent = ({ addNotification }) => {
     // console.log(Notification.permission);
     
     if (Notification.permission !== "granted") {
+      // TO make the request
       Notification.requestPermission().then(permission => {
         setPermissionGranted(permission === "granted");
       });
@@ -24,9 +26,10 @@ const MainContent = ({ addNotification }) => {
     
     if (permissionGranted) {
       try {
-        new Notification("New Notification", {
+        new Notification("New Notification From Deepan", {
           body: message,
-          // icon: "https://via.placeholder.com/150",
+          icon:icon,
+          
         });
         console.log("Notification shown");
       } catch (error) {
@@ -38,18 +41,27 @@ const MainContent = ({ addNotification }) => {
   };
 
   return (
-    <Container className="mt-4">
-      <div className="row d-flex justify-content-center">
+    <Container className="mt-4 ">
+      <div className="row d-flex justify-content-center g-3 ">
         {Array.from({ length: 8 }, (_, i) => (
-          <div className="col-lg-3 col-sm-12 col-md-6 p-1 d-flex justify-content-center btn-parent" key={i}>
+          <Card className="col-lg-3 col-sm-12 col-md-6 p-2 d-flex justify-content-center btn-parent my-2 " key={i}>
+            <Card.Img variant='top' src={`https://picsum.photos/id/${i+11}/200`} alt="Image" className="img img-thumbnail img-fluid"/>
+
+            {/* <Card.Img varient='top' src="https://picsum.photos//200"alt="Image" className=" img img-thumbnail img-fluid"/> */}
+            <CardBody className="bg-light border">
+              <CardTitle className="bg-light">Notification {i+1}</CardTitle>
+              <CardText className="bg-light text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam eveniet assumenda, itaque est in reiciendis impedit aut nihil ea aliquam quae quas, atque praesentium veritatis explicabo error! In, facere!</CardText>
+            
+            
             <Button
               variant=""
               onClick={() => handleButtonClick(`Notification ${i + 1}`)}
-              className="m-2 btn-notify text-light"
+              className="m-2 btn-notify"
             >
               Notification {i + 1}
             </Button>
-          </div>
+            </CardBody>
+          </Card>
         ))}
       </div>
     </Container>

@@ -1,7 +1,9 @@
 .navbar{
     background-color: aliceblue !important;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
 }
 
 .dd{

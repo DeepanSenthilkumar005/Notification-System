@@ -1,10 +1,10 @@
 *{
     background-color: rgb(33, 33,33);
 }
-.btn-notify{
+/* .btn-notify{
     height:100px;
     width: fit-content;
-}
+} */
 
 .btn-notify {
     position: relative !important;
@@ -16,7 +16,7 @@
     font-weight: 600 !important;
     letter-spacing: 2px !important;
     background: transparent !important;
-    color: #fff !important;
+    color: rgb(33, 33,33) !important;
     overflow: hidden !important;
     box-shadow: 0 0 0 0 transparent !important;
     -webkit-transition: all 0.2s ease-in !important;
@@ -26,6 +26,7 @@
   
   .btn-notify:hover {
     background: rgb(61, 106, 255) !important;
+    color: #fff;
     box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815) !important;
     -webkit-transition: all 0.2s ease-out !important;
     -moz-transition: all 0.2s ease-out !important;
