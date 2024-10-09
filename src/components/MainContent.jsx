@@ -27,10 +27,11 @@ const MainContent = ({ addNotification }) => {
     if (permissionGranted) {
       try {
         new Notification("New Notification From Deepan", {
-          body: message,
+          body: message+" was clicked",
           icon:icon,
           
         });
+     
         console.log("Notification shown");
       } catch (error) {
         console.error("Notification failed: ", error);
@@ -46,7 +47,11 @@ const MainContent = ({ addNotification }) => {
         {Array.from({ length: 8 }, (_, i) => (
           <Card className="col-lg-3 col-sm-12 col-md-6 p-2 d-flex justify-content-center btn-parent my-2 " key={i}>
             <Card.Img variant='top' src={`https://picsum.photos/id/${i+11}/200`} alt="Image" className="img img-thumbnail img-fluid"/>
-
+           {/* <div className="card"> <video controls width="100%" height="200px">
+              <source src="https://youtu.be/D0UnqGm_miA?si=UgULYDwFZVEAo06M" type="video/mp4" />
+            
+              Your browser does not support the video tag.
+            </video></div> */}
             {/* <Card.Img varient='top' src="https://picsum.photos//200"alt="Image" className=" img img-thumbnail img-fluid"/> */}
             <CardBody className="bg-light border">
               <CardTitle className="bg-light">Notification {i+1}</CardTitle>
