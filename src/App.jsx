@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/home' element={<>
+        <Route path='/' element={<>
           <NavBar  notifications={notifications}/>
           <Home/>
         </>} />
